@@ -93,10 +93,12 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         return listItemview;
     }
 
+
     private String magnitudeFormatter(double mag){
         DecimalFormat formatter = new DecimalFormat("0.0");
         return formatter.format(mag);
     }
+
 
     private int getMagnitudeColor(double magnitude){
         int magnitudeFloor = (int) Math.floor(magnitude);

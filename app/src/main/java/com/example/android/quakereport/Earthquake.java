@@ -10,12 +10,16 @@ public class Earthquake {
     /* Date of Earthquake */
     private Long mDate;
 
+    // Url of Earthquake
+    private String URL;
+
     /* Constructor to initialize the variables */
 
-    public Earthquake(double magnitude, String location, Long date){
+    public Earthquake(double magnitude, String location, Long date, String URL){
         mMagnitude = magnitude;
         mLocation = location;
         mDate = date;
+        this.URL = URL;
     }
 
     /* return the value of Magnitude */
@@ -26,4 +30,7 @@ public class Earthquake {
 
     /* Return the value of Date */
     public Long getDate(){return mDate;}
+
+    //Return the URL of Earthquake
+    public String getURL(){return URL;}
 }

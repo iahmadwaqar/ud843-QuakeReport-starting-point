@@ -59,10 +59,8 @@ public final class QueryUtils {
                 double magnitude =propertyJsonObject.getDouble("mag");
                 String location = propertyJsonObject.getString("place");
                 Long time = propertyJsonObject.getLong("time");
-             //   Date dateFormat = new Date(time);
-               // SimpleDateFormat dateFormatter = new  SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-                //String strDate = dateFormatter.format(dateFormat);
-                earthquakes.add( new Earthquake(magnitude, location, time));
+                String URL = propertyJsonObject.getString("url");
+                earthquakes.add( new Earthquake(magnitude, location, time, URL));
             }
 
         } catch (JSONException e) {
